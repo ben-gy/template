@@ -21,6 +21,12 @@ gem 'simple_form'
 gem 'client_side_validations'
 # Front-end validation (for simple_form)
 gem 'client_side_validations-simple_form'
+
+# THIS IS HOW FAR I HAVE MADE IT
+# * also, install Jquery
+# * copy across initaliser an other /config code
+# * copy across the JS packs
+
 # User authentication
 gem 'devise'
 # Faster markup language
