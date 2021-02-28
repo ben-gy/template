@@ -21,12 +21,6 @@ gem 'simple_form'
 gem 'client_side_validations'
 # Front-end validation (for simple_form)
 gem 'client_side_validations-simple_form'
-
-# THIS IS HOW FAR I HAVE MADE IT
-# * also, install Jquery
-# * copy across initaliser an other /config code
-# * copy across the JS packs
-
 # User authentication
 gem 'devise'
 # Faster markup language
@@ -35,76 +29,81 @@ gem 'slim-rails'
 gem 'ahoy_matey'
 # Hash the IDs
 gem 'hashid-rails'
-# Flexbox grid
-gem 'flexbox_rb', github: 'ben-gy/flexbox_rb'
 # Authorisation
 gem 'pundit'
 # Transactional emails
 gem 'postmark-rails'
-# Normalise browser style rendering
-gem 'normalize-scss'
-# Add vendor prefixes to CSS
-gem 'autoprefixer-rails'
 # Role management
 gem 'rolify'
 # centralised text
 gem 'config'
 # Version tracking
 gem 'paper_trail'
-# Payments
-gem 'stripe'
-# Slack notifications
-gem 'slack-notify', github: 'ben-gy/slack-notify'
-# Amazon s3 api
-gem 'aws-sdk-s3'
 # Background jobs
 gem 'sidekiq'
-# Sitemap generator
-gem 'sitemap_generator'
-# Reverse geocode address
-gem 'geocoder'
-# Turn coordinates into timezone
-gem 'timezone'
 # Encrypt sensitive data
 gem 'lockbox'
 # Anonymise IP
 gem 'ip_anonymizer'
 # Keep PII out of logs
 gem 'logstop'
-# Markdown parser
-gem 'redcarpet'
-# Get country information
-gem 'countries'
-# Get currency information
-gem 'money'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-# Zipping files
-gem 'rubyzip'
-# Intercom messenger
-gem 'intercom-rails'
-# Intercom API
-gem 'intercom'
-# inviting users
-gem 'devise_invitable'
 # Time difference helpers
 gem 'time_difference'
-# Time/date parsing
-gem 'chronic'
-# Transactional sms
-gem 'twilio-ruby'
-# Random word generator
-gem 'spicy-proton'
 # Catch bad migrations
 gem 'strong_migrations'
+# Static pages
+gem 'high_voltage'
+
 # Preload counts (to avoid N+1 issues).
-gem 'preload_counts'
-# Search
-gem 'ransack'
+# gem 'preload_counts'
+# Random word generator
+# gem 'spicy-proton'
+# Transactional sms
+# gem 'twilio-ruby'
+# Time/date parsing
+# gem 'chronic'
+# inviting users
+# gem 'devise_invitable'
+# Simple search
+# gem 'ransack'
+# Markdown parser
+# gem 'redcarpet'
+# Get country information
+# gem 'countries'
+# Get currency information
+# gem 'money'
+# Normalize phone numbers
+#  gem 'phony_rails'
+# Browser
+# gem 'browser'
+# Search encrypted data (lockbox gem)
+#  gem 'blind_index'
+# Geocode/reverse-geocode address/coordinates
+# gem 'geocoder'
+# Turn coordiantes into timezones
+# gem 'timezone'
+# Receive payments
+# gem 'stripe'
+# Store files in AWS S3
+# gem 'aws-sdk-s3'
+# Slack notifications
+# gem 'slack-notify', github: 'ben-gy/slack-notify'
+# Intercom messenger
+# gem 'intercom-rails'
+# Intercom API
+# gem 'intercom'
+# Zipping files
+# gem 'rubyzip'
+# Streaming zip files
+# gem 'zipline'
+# URL shortener
+# gem 'shortener'
 
 group :staging, :production do
   # Security
-  gem 'sqreen'
+  # gem 'sqreen'
 end
 
 group :development do
@@ -120,12 +119,15 @@ group :development do
   gem 'html2slim'
   # Environment variables
   gem 'figaro'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Time travelling
   gem 'timecop'
   # Code quality
   gem 'rubycritic', require: false
+  # Sitemap generator
+  gem 'sitemap_generator'
+
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # gem 'byebug'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,82 @@
+title
+  = '(DEV) ' if Rails.env.development?
+  = '(STG) ' if ENV['CURRENT_ENVIRONMENT'] == 'staging'
+  | #{Settings.metadata.title} | #{Settings.metadata.summary}
+
+/ General HTML MetaTags
+link rel="canonical" href="#{root_url}"
+link rel="icon" href="#{root_url}favicon.ico" type="image/x-icon"
+meta name="author" content="#{Settings.metadata.title}"
+
+/ Dynamic HTML (User Tag-List based meta-tags)
+meta name="keywords" content="#{Settings.metadata.keywords}"
+meta name="topic" content="#{Settings.metadata.keywords}"
+meta name="category" content="#{Settings.metadata.keywords}"
+
+/ NOTE: Dynamic User content based meta-tags
+meta name="description" content="#{Settings.metadata.description}"
+meta name="summary" content="#{Settings.metadata.summary}"
+meta name="subject" content="#{Settings.metadata.summary}"
+
+/ Declare the site is family safe
+meta name="target" content="all"
+meta name="audience" content="all"
+meta name="coverage" content="Worldwide"
+meta name="distribution" content="Global"
+meta name="rating" content="safe for kids"
+
+/ Tags not included
+meta name="copyright"content="#{Settings.metadata.title}"
+meta name="url" content="#{root_url}"
+meta name="identifier-URL" content="#{root_url}"
+meta name="Classification" content="Business"
+meta name="owner" content="#{root_url}"
+
+/ Facebook Dynamic (linkedin also follows Open Graph)
+meta property="og:title" content="#{Settings.metadata.title}"
+meta property="og:description" content="#{Settings.metadata.description}"
+meta property="og:image" content="#{root_url}logos/logo_social.png"
+meta property="og:image:secure_url" content="#{root_url}logos/logo_social.png"
+meta property="og:image:alt" content="#{Settings.metadata.title}"
+meta property="og:url" content="#{root_url}"
+meta property="og:fb:app_id" content="covidcomply"
+meta property="og:email" content="#{Settings.metadata.email}"
+
+/ Facebook Static (LinkedIn also follows Open Graph)
+meta property="og:type" content="website"
+meta property="og:site_name" content="#{Settings.metadata.title}"
+meta property="og:locale" content="en_US"
+
+/ Twitter Dynamic
+meta name="twitter:title" content="#{Settings.metadata.title}"
+meta name="twitter:description" content="#{Settings.metadata.description}"
+meta name="twitter:image" href="#{root_url}logos/logo_square.png"
+
+/ Twitter Static
+meta name="twitter:card" content="summary"
+
+/ NOTE: Not included as irrelevant
+/ meta name="og:email" content=""
+/ meta property="og:updated_time" content=""
+/ meta name="og:street-address" content="1601 S California Ave"
+/ meta name="og:locality" content="Palo Alto"
+/ meta name="og:region" content="CA"
+/ meta name="og:postal-code" content="94304"
+/ meta name="og:country-name" content="USA"
+/ meta property="og:type" content="game.achievement"
+/ meta property="og:points" content="POINTS_FOR_ACHIEVEMENT"
+/ meta property="og:video" content="http://example.com/awesome.swf"
+/ meta property="og:video:height" content="640"
+/ meta property="og:video:width" content="385"
+/ meta property="og:video:type" content="application/x-shockwave-flash"
+/ meta property="og:video" content="http://example.com/html5.mp4"
+/ meta property="og:video:type" content="video/mp4"
+/ meta property="og:video" content="http://example.com/fallback.vid"
+/ meta property="og:video:type" content="text/html"
+/ meta property="og:audio" content="http://example.com/amazing.mp3"
+/ meta property="og:audio:title" content="Amazing Song"
+/ meta property="og:audio:artist" content="Amazing Band"
+/ meta property="og:audio:album" content="Amazing Album"
+/ meta property="og:audio:type" content="application/mp3"
+/ meta name="revisit-after" content="7 days"
+/ meta http-equiv="Pragma" content="no-cache"

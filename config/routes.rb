@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # --- generated routes above this line ---
+
+  # Users.
+  devise_for :users
+
+  # Utilities.
+  authenticate :user, lambda { |u| u.has_role?(:utilities) } do
+    mount Sidekiq::Web => '/internal/sidekiq'
+  end
+
+  # legal pages
+  get '/legals/privacy' => redirect(Settings.legal.privacy_policy)
+  get '/legals/cookies' => redirect(Settings.legal.cookie_policy)
+  get '/legals/terms' => redirect(Settings.legal.cookie_policy)
 end

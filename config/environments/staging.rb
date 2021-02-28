@@ -109,4 +109,20 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # Default host for mailer service.
+  config.action_mailer.default_url_options = { host: ENV['DOMAIN_NAME'] }
+
+  # Transational email service configuration
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = {api_token: ENV['POSTMARK_API_TOKEN']}
+  ActionMailer::Base.smtp_settings = {
+    user_name: ENV['POSTMARK_API_TOKEN'],
+    password: ENV['POSTMARK_API_TOKEN'],
+    domain: ENV['DOMAIN_NAME'],
+    address: 'smtp.postmarkapp.com',
+    port: 587,
+    authentication: :tls,
+    enable_starttls_auto: true
+  }
 end

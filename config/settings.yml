@@ -1,0 +1,19 @@
+# utilities
+url:
+  sitemap_host: https://yoursite.com
+email:
+  mailer_from: hello@yoursite.com
+
+# metadata
+metadata:
+  title: Company Name
+  summary: Company Summary
+  description: Company Description
+  keywords: Company keywords
+  email: hello@yoursite.com
+
+# links
+legal: 
+  privacy_policy: https://yoursite.com/privacy
+  terms_conditions: https://yoursite.com/terms
+  cookie_policy: https://yoursite.com/cookies

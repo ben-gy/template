@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
 
     # Ahoy tracks actions
     def track_action
-      ahoy.track 'controller action', request.path_parameters
+      ahoy.track "#{self.class.to_s}##{self.action_name}", request.path_parameters
     end
 
   private
