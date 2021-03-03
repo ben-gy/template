@@ -1,7 +1,7 @@
 title
   = '(DEV) ' if Rails.env.development?
   = '(STG) ' if ENV['CURRENT_ENVIRONMENT'] == 'staging'
-  | #{Settings.metadata.title} | #{Settings.metadata.summary}
+  | #{@page_title.present? ? @page_title : Settings.metadata.title} | #{@page_summary.present? ? @page_summary : Settings.metadata.summary}
 
 / General HTML MetaTags
 link rel="canonical" href="#{root_url}"
