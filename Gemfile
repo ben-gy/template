@@ -84,6 +84,10 @@ gem 'high_voltage'
 # gem 'geocoder'
 # Turn coordiantes into timezones
 # gem 'timezone'
+# Local time
+# gem 'local_time'
+# Phone number parsing
+# gem 'phonelib'
 # Receive payments
 # gem 'stripe'
 # Store files in AWS S3
