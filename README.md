@@ -20,9 +20,9 @@
 ### Front-end setup options
 
 * Install Bootstrap with ```yarn add bootstrap```
-* Install Flexbox ```gem 'flexbox_rb', github: 'ben-gy/flexbox_rb'```
-* Install normalize ```yarn add normalize.scss```
-* Install autoprefixer ```yarn add autoprefixer```
+* Install Flexbox Grid  ```yarn add flexboxgrid```
+* Install Normalize ```yarn add normalize.scss```
+* Install Autoprefixer ```yarn add autoprefixer```
 * Install JQuery (multiple steps, google it)
 
 ## Creation guides
