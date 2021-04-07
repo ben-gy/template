@@ -8,6 +8,7 @@
 * Update robots.txt
 * Update settings.yml
 * Generate new sitemap ````rake sitemap:refresh```
+
 ### Optional setup steps
 
 * Install bugsnag
@@ -19,6 +20,7 @@
 
 ### Front-end setup options
 
+* Delete ```assets/stylsheets/scaffolds.scss```
 * Install Bootstrap with ```yarn add bootstrap```
 * Install Flexbox Grid  ```yarn add flexboxgrid```
 * Install Normalize ```yarn add normalize.scss```
