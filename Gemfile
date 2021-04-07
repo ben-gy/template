@@ -76,7 +76,7 @@ gem 'high_voltage'
 # gem 'money'
 # Normalize phone numbers
 #  gem 'phony_rails'
-# Browser
+# Media queries
 # gem 'browser'
 # Search encrypted data (lockbox gem)
 #  gem 'blind_index'
@@ -129,7 +129,6 @@ group :development do
   gem 'rubycritic', require: false
   # Sitemap generator
   gem 'sitemap_generator'
-
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
 end

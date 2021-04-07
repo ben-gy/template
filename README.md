@@ -3,14 +3,14 @@
 
 ### Required setup steps (production)
 
+* Create ```config/application.yml```
 * Setup a Postmark account
-* Deploy to Heroku
 * Update robots.txt
 * Update settings.yml
-* Add extra gems in Gemfile
-* Install bugsnag
+* Generate new sitemap ````rake sitemap:refresh```
 ### Optional setup steps
 
+* Install bugsnag
 * Setup tracking custom events with Ahoy
 * Modify ahoy.rb for GDPR compliance
 * If platform has UGC, move the sitemap generator gem to production
@@ -65,6 +65,7 @@ end
 ### When creating a new static page
 
 * Follow these steps - https://github.com/thoughtbot/high_voltage
+* Generate new sitemap ````rake sitemap:refresh```
 
 ## To Do (future)
 
