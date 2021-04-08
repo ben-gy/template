@@ -12,6 +12,7 @@
 ### Optional setup steps
 
 * Install bugsnag
+* Enable S3 on in ```config/storage.yml``` and ```production.rb / staging.rb```
 * Setup tracking custom events with Ahoy
 * Modify ahoy.rb for GDPR compliance
 * If platform has UGC, move the sitemap generator gem to production
