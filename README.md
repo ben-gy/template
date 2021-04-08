@@ -75,6 +75,13 @@ end
 * Follow these steps - https://github.com/thoughtbot/high_voltage
 * Generate new sitemap ````rake sitemap:refresh```
 
+### When adding a new font
+
+* Use asset-url instead of url in your @fontface css class e.g.
+```
+src: asset-url("kollektif/Kollektif.ttf") format("truetype")
+```
+
 ## To Do (future)
 
 * Delete older visitor automatically: https://github.com/ankane/ahoy#data-retention
