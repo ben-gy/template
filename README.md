@@ -18,6 +18,11 @@
 * If platform has UGC, move the sitemap generator gem to production
 * Add additional metadata
 * Add trackers and fonts to ```views/layouts/scipts``` folder
+* Add Procfile for Heroku
+```
+web:      bundle exec puma -C config/puma.rb
+release:  bundle exec rake db:migrate
+```
 
 ### Front-end setup options
 
