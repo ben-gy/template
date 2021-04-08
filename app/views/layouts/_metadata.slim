@@ -2,7 +2,7 @@ title
   = '(DEV) ' if Rails.env.development?
   = '(STG) ' if ENV['CURRENT_ENVIRONMENT'] == 'staging'
   - if @page_title.present? 
-    | #{@page_title.present?} | #{Settings.metadata.title}
+    | #{@page_title} | #{Settings.metadata.title}
   - else
     | #{Settings.metadata.title} | #{@page_summary.present? ? @page_summary : Settings.metadata.summary}
 
