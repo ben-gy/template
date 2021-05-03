@@ -3,6 +3,7 @@
 
 ### Required setup steps (production)
 
+* Renamce the database
 * Create ```config/application.yml```
 * Setup a Postmark account
 * Update robots.txt
