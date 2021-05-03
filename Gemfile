@@ -106,6 +106,8 @@ gem 'high_voltage'
 # gem 'zipline'
 # URL shortener
 # gem 'shortener'
+# HTTP requests
+# gem 'faraday'
 
 group :staging, :production do
   # Security
