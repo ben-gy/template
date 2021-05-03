@@ -56,6 +56,8 @@ gem 'strong_migrations'
 # Static pages
 gem 'high_voltage'
 
+# Charts
+# gem 'chartkick'
 # Preload counts (to avoid N+1 issues).
 # gem 'preload_counts'
 # Random word generator
