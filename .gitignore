@@ -47,6 +47,3 @@ config/environments/*.local.yml
 
 # Ignore Redis database.
 dump.rdb
-
-# Ignore application configuration
-/config/application.yml
