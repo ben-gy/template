@@ -134,7 +134,7 @@ group :development do
   # Sitemap generator
   gem 'sitemap_generator'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  # gem 'byebug'
+  gem 'byebug'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

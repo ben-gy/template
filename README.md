@@ -9,6 +9,7 @@
 * Update robots.txt
 * Update settings.yml
 * Generate new sitemap ````rake sitemap:refresh```
+* Install figaro ```bundle exec figaro install```
 
 ### Optional setup steps
 
