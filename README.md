@@ -90,3 +90,4 @@ src: asset-url("kollektif/Kollektif.ttf") format("truetype")
 ## Troubleshooting
 
 * If using ```request.remote_ip``` in your code, make sure to diable ```config.middleware.insert_after ActionDispatch::RemoteIp, IpAnonymizer::MaskIp``` in application.rb
+* If you have commited files before the .gitignore file, use ```git rm -r --cached .``` to reset the committed files.
