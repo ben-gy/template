@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  # Devise configuration (optional: invitable, omniauthable)
+  # Devise configuration (optional: invitable, omniauthable, confirmable)
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :lockable, :trackable
 
   # custom validation formulas
