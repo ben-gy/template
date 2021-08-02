@@ -3,7 +3,7 @@
 
 ### Required setup steps (production)
 
-* Renamce the database
+* Rename the database
 * Create ```config/application.yml```
 * Setup a Postmark account
 * Update robots.txt
@@ -93,3 +93,7 @@ src: asset-url("kollektif/Kollektif.ttf") format("truetype")
 
 * If using ```request.remote_ip``` in your code, make sure to diable ```config.middleware.insert_after ActionDispatch::RemoteIp, IpAnonymizer::MaskIp``` in application.rb
 * If you have commited files before the .gitignore file, use ```git rm -r --cached .``` to reset the committed files.
+
+## Heroku Test
+
+This repo auto-deploys to ```https://bens-rails-template.herokuapp.com```
