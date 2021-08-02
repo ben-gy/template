@@ -3,10 +3,6 @@ class ApplicationController < ActionController::Base
   
   # basic authentication
   before_action :http_basic_authenticate if Rails.env.staging?
-  
-  # authorisation
-  include Pundit
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   # activity tracking
   after_action :track_action

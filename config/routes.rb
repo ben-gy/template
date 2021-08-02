@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   # Legals.
-  get '/legals/privacy' => redirect(Settings.legal.privacy_policy)
-  get '/legals/cookies' => redirect(Settings.legal.cookie_policy)
-  get '/legals/terms' => redirect(Settings.legal.cookie_policy)
+  get '/privacy' => redirect(Settings.legal.privacy_policy)
+  get '/cookies' => redirect(Settings.legal.cookie_policy)
+  get '/terms' => redirect(Settings.legal.cookie_policy)
 end

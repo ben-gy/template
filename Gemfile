@@ -9,6 +9,9 @@ gem 'rails', '~> 6'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma'
+# Redis for background jobs
+gem 'redis'
+gem 'hiredis'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Transpile app-like JavaScript
@@ -30,7 +33,7 @@ gem 'ahoy_matey'
 # Hash the IDs
 gem 'hashid-rails'
 # Authorisation
-gem 'pundit'
+gem 'action_policy'
 # Transactional emails
 gem 'postmark-rails'
 # Role management
@@ -55,7 +58,13 @@ gem 'time_difference'
 gem 'strong_migrations'
 # Static pages
 gem 'high_voltage'
+# Pretty print console
+gem 'awesome_print'
 
+# Admin framework
+# gem 'trestle'
+# Datatables
+# gem 'effective_datatables'
 # Charts
 # gem 'chartkick'
 # Preload counts (to avoid N+1 issues).
@@ -66,6 +75,7 @@ gem 'high_voltage'
 # gem 'twilio-ruby'
 # Time/date parsing
 # gem 'chronic'
+# gem 'chronic_duration'
 # inviting users
 # gem 'devise_invitable'
 # Simple search
@@ -108,6 +118,14 @@ gem 'high_voltage'
 # gem 'shortener'
 # HTTP requests
 # gem 'faraday'
+# Global postcode validation
+# gem 'validates_zipcode'
+# simple datetime validations
+# gem 'date_validator'
+# active storage validations
+# gem 'active_storage_validations'
+# dimension validator or :aspect_ratio validator
+# gem 'mini_magick'
 
 group :staging, :production do
   # Security

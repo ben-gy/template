@@ -14,6 +14,7 @@ module Redial
     # Turn off asset generators.
     config.generators.stylesheets = false
     config.generators.javascripts = false
+    config.generators.test_framework = nil
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -30,6 +31,6 @@ module Redial
     Rails.application.routes.default_url_options[:host] = ENV['DOMAIN_NAME']
 
     # Cookie config
-    Rails.application.config.session_store :cookie_store, key: '_covid_aware_session', expire_after: 1.month, domain: :all
+    config.session_store :cache_store, key: '_application_session', expire_after: 28.days, domain: :all
   end
 end

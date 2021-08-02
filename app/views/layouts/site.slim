@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+		meta http-equiv='X-UA-Compatible' content='IE=edge'
+    meta name='apple-mobile-web-app-capable' content='yes'
+		meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no'
+    meta name='apple-mobile-web-app-title' content="#{Settings.metadata.title}"
+    meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'
+
+    = render 'layouts/metadata'
+
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'site', media: 'all', 'data-turbolinks-track': 'reload'
+    / = javascript_pack_tag 'site', 'data-turbolinks-track': 'reload'
+
+    = render 'layouts/scripts/head/utilities'
+    = render 'layouts/scripts/head/trackers'
+    = render 'layouts/scripts/head/cookies'
+    
+  body#body
+    = render 'layouts/scripts/body/trackers'
+    = render 'pages/partials/header'
+
+    = yield
+    
+    = render 'pages/partials/footer'
+    = render 'pages/partials/notifications'
+    = render 'layouts/scripts/foot/trackers'
+    
+    #websocket_enabled
+
+/ - console if Rails.env.development?

@@ -31,9 +31,9 @@ SitemapGenerator::Sitemap.create do
   end
 
   # legal pages
-  add legals_privacy_path
-  add legals_cookies_path
-  add legals_terms_path
+  add privacy_path
+  add cookies_path
+  add terms_path
 
   # note: root_path is added by default
 end

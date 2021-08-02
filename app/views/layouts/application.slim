@@ -17,20 +17,18 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
     = render 'layouts/scripts/utilities'
-    = render 'layouts/scripts/trackers_head'
+    = render 'layouts/scripts/trackers/head'
     = render 'layouts/scripts/cookies'
     
-    - if @stripe_refresh
-      meta name='stripe-refresh' content="#{Time.zone.now.to_i}"
-    
   body#body
-    = render 'layouts/scripts/trackers_body'
+    = render 'layouts/scripts/trackers/body'
     = render 'shared/header'
 
     = yield
     
     = render 'shared/footer'
     = render 'shared/notifications'
+    = render 'layouts/scripts/trackers/body'
     
     #websocket_enabled
 
