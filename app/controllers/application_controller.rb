@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :reset_session
+
+  # more flash types
+  add_flash_types :error, :warning, :success, :info
   
   # basic authentication
   before_action :http_basic_authenticate if Rails.env.staging?

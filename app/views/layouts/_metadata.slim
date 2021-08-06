@@ -1,19 +1,18 @@
 title
   = '(DEV) ' if Rails.env.development?
   = '(STG) ' if ENV['CURRENT_ENVIRONMENT'] == 'staging'
-  | #{Settings.metadata.title}
-
-meta name="description" content="#{Settings.metadata.description}"
+  | #{@page_title.present? ? @page_title : Settings.metadata.title}
+meta name="description" content="#{@page_summary.present? ? @page_summary : Settings.metadata.description}"
 
 / Open Graph (Facebook, LinkedIn, etc)
-meta property="og:title" content="#{Settings.metadata.title}"
-meta property="og:description" content="#{Settings.metadata.description}"
+meta property="og:title" content="#{@page_title.present? ? @page_title : Settings.metadata.title}"
+meta property="og:description" content="#{@page_summary.present? ? @page_summary : @page_summary.present? ? @page_summary : Settings.metadata.description}"
 meta property="og:image" content="#{root_url}logos/logo_social.png"
 meta property="og:url" content="#{root_url}"
 
 / Twitter
-meta name="twitter:title" content="#{Settings.metadata.title}"
-meta name="twitter:description" content="#{Settings.metadata.description}"
+meta name="twitter:title" content="#{@page_title.present? ? @page_title : Settings.metadata.title}"
+meta name="twitter:description" content="#{@page_summary.present? ? @page_summary : Settings.metadata.description}"
 meta name="twitter:image" href="#{root_url}logos/logo_square.png"
 meta name="twitter:card" content="summary_large_image"
 

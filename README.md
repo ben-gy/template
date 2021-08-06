@@ -5,7 +5,6 @@
 
 * Rename the database
 * Create ```config/application.yml```
-* Setup a Postmark account
 * Update robots.txt
 * Update settings.yml
 * Generate new sitemap ````rake sitemap:refresh```
@@ -14,17 +13,14 @@
 ### Optional setup steps
 
 * Install bugsnag
+* Setup a Postmark account and update ```production.rb / staging.rb```
 * Enable S3 on in ```config/storage.yml``` and ```production.rb / staging.rb```
 * Setup tracking custom events with Ahoy
 * Modify ahoy.rb for GDPR compliance
 * If platform has UGC, move the sitemap generator gem to production
 * Add additional metadata
 * Add trackers and fonts to ```views/layouts/scipts``` folder
-* Remove Procfile for Heroku
-```
-web:      bundle exec puma -C config/puma.rb
-release:  bundle exec rake db:migrate
-```
+* Remove Procfile if not using Heroku
 
 ### Front-end setup options
 
@@ -88,11 +84,19 @@ src: asset-url("kollektif/Kollektif.ttf") format("truetype")
 
 * Delete older visitor automatically: https://github.com/ankane/ahoy#data-retention
 * Setup visitor geocoding: https://github.com/ankane/ahoy#geocoding
+* Setup basic auth on staging: https://lockupgem.com
 
 ## Troubleshooting
 
-* If using ```request.remote_ip``` in your code, make sure to diable ```config.middleware.insert_after ActionDispatch::RemoteIp, IpAnonymizer::MaskIp``` in application.rb
+* If using ```request.remote_ip``` in your code, make sure to disable ```config.middleware.insert_after ActionDispatch::RemoteIp, IpAnonymizer::MaskIp``` in application.rb
 * If you have commited files before the .gitignore file, use ```git rm -r --cached .``` to reset the committed files.
+* If you are having issues with login authenticyty token run ```rails dev:cache``` to ensure "Development mode is now being cached."
+
+## Running the app
+
+1. redis-server
+2. rails s
+3. sidekiq
 
 ## Heroku Test
 

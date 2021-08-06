@@ -61,6 +61,14 @@ gem 'high_voltage'
 # Pretty print console
 gem 'awesome_print'
 
+# Email validation
+# gem 'email_validator'
+# Validate URLs
+# gem 'validate_url'
+# Feather icons
+# gem 'rails_feather'
+# First and last name management
+# gem 'name_of_person'
 # Admin framework
 # gem 'trestle'
 # Datatables
@@ -87,11 +95,11 @@ gem 'awesome_print'
 # Get currency information
 # gem 'money'
 # Normalize phone numbers
-#  gem 'phony_rails'
+# gem 'phony_rails'
 # Media queries
 # gem 'browser'
 # Search encrypted data (lockbox gem)
-#  gem 'blind_index'
+# gem 'blind_index'
 # Geocode/reverse-geocode address/coordinates
 # gem 'geocoder'
 # Turn coordiantes into timezones
