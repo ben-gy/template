@@ -7,7 +7,7 @@
 * Create ```config/application.yml```
 * Update robots.txt
 * Update settings.yml
-* Generate new sitemap ````rake sitemap:refresh```
+* Generate new sitemap ```rake sitemap:refresh```
 * Install figaro ```bundle exec figaro install```
 
 ### Optional setup steps
@@ -71,7 +71,7 @@ end
 ### When creating a new static page
 
 * Follow these steps - https://github.com/thoughtbot/high_voltage
-* Generate new sitemap ````rake sitemap:refresh```
+* Generate new sitemap ```rake sitemap:refresh```
 
 ### When adding a new font
 
