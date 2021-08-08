@@ -134,6 +134,12 @@ gem 'awesome_print'
 # gem 'active_storage_validations'
 # dimension validator or :aspect_ratio validator
 # gem 'mini_magick'
+# Soft deleting
+# gem 'paranoia'
+# Pagination
+# gem 'kamini'
+# Clenaer view helpders
+# gem 'draper'
 
 group :staging, :production do
   # Security
@@ -161,6 +167,9 @@ group :development do
   gem 'sitemap_generator'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Better error pages
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

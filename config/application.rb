@@ -30,7 +30,7 @@ module Redial
     # Host configuration.
     Rails.application.routes.default_url_options[:host] = ENV['DOMAIN_NAME']
 
-    # Cookie config
+    # Cookie config.
     config.session_store :cache_store, key: '_application_session', expire_after: 28.days, domain: :all
   end
 end
