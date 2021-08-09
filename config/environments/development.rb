@@ -74,4 +74,14 @@ Rails.application.configure do
 
   # Better errors pages.
   config.consider_all_requests_local = true
+
+  # Bullet configuration.
+  config.after_initialize do
+    Bullet.enable        = false
+    Bullet.alert         = false
+    Bullet.bullet_logger = false
+    Bullet.console       = false
+    Bullet.rails_logger  = false
+    Bullet.add_footer    = false
+  end
 end

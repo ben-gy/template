@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6'
@@ -128,11 +128,11 @@ gem 'awesome_print'
 # gem 'faraday'
 # Global postcode validation
 # gem 'validates_zipcode'
-# simple datetime validations
+# Simple datetime validations
 # gem 'date_validator'
-# active storage validations
+# Active storage validations
 # gem 'active_storage_validations'
-# dimension validator or :aspect_ratio validator
+# Dimension validator or :aspect_ratio validator
 # gem 'mini_magick'
 # Soft deleting
 # gem 'paranoia'
@@ -140,6 +140,8 @@ gem 'awesome_print'
 # gem 'kamini'
 # Clenaer view helpders
 # gem 'draper'
+# Preload counts (to avoid N+1 issues)
+# gem 'preload_counts'
 
 group :staging, :production do
   # Security
@@ -159,6 +161,7 @@ group :development do
   gem 'html2slim'
   # Environment variables
   gem 'figaro'
+  gem 'dotenv-rails'
   # Time travelling
   gem 'timecop'
   # Code quality
@@ -167,9 +170,15 @@ group :development do
   gem 'sitemap_generator'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Performance
+  gem 'bullet'
+  # Time travelling
+  gem 'timecop'
   # Better error pages
   gem 'better_errors'
   gem 'binding_of_caller'
+  # Keep the dataabase clean
+  gem 'active_record_doctor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

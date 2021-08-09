@@ -12,8 +12,7 @@ module Redial
     config.load_defaults 6.0
 
     # Turn off asset generators.
-    config.generators.stylesheets = false
-    config.generators.javascripts = false
+    config.generators.assets = false
     config.generators.test_framework = nil
 
     # Settings in config/environments/* take precedence over those specified here.
