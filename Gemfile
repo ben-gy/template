@@ -60,7 +60,13 @@ gem 'strong_migrations'
 gem 'high_voltage'
 # Pretty print console
 gem 'awesome_print'
+# Basic auth
+gem 'lockup'
+# Dynamic metatags
+# gem 'meta-tags'
 
+# Nested froms
+# gem 'cocoon'
 # Email validation
 # gem 'email_validator'
 # Validate URLs

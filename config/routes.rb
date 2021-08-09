@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/internal/sidekiq'
   end
 
+  # Basic auth.
+  mount Lockup::Engine, at: '/lockup'
+
   # Legals.
   get '/privacy' => redirect(Settings.legal.privacy_policy)
   get '/cookies' => redirect(Settings.legal.cookie_policy)

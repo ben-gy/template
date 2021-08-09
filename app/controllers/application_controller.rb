@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :reset_session
 
+  # basic auth
+  before_action :check_for_lockup if Rails.env.staging?
+
   # more flash types
   add_flash_types :error, :warning, :success, :info
-  
-  # basic authentication
-  before_action :http_basic_authenticate if Rails.env.staging?
 
   # activity tracking
   after_action :track_action
@@ -35,13 +35,6 @@ class ApplicationController < ActionController::Base
     end
 
   private
-
-    # basic authentication
-    def http_basic_authenticate
-      authenticate_or_request_with_http_basic do |name, password|
-        name == 'codeword' && password == 'p4rxaBrKLy!d9CKasTT9Dc!p.hf6m-'
-      end
-    end
 
     # Set the last active time on a user
     def record_user_activity

@@ -9,6 +9,11 @@
 * Update settings.yml
 * Generate new sitemap ```rake sitemap:refresh```
 * Install figaro ```bundle exec figaro install```
+* Setup lockup codeword and hint in ```config/application.yml```
+```
+lockup_codeword: codewordgoeshere
+lockup_hint: hintgoeshere
+```
 
 ### Optional setup steps
 
@@ -85,6 +90,7 @@ src: asset-url("kollektif/Kollektif.ttf") format("truetype")
 * Delete older visitor automatically: https://github.com/ankane/ahoy#data-retention
 * Setup visitor geocoding: https://github.com/ankane/ahoy#geocoding
 * Setup basic auth on staging: https://lockupgem.com
+* Setup meta-tags gem
 
 ## Troubleshooting
 
