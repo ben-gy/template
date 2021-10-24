@@ -62,9 +62,17 @@ gem 'high_voltage'
 gem 'awesome_print'
 # Basic auth
 gem 'lockup'
+
 # Dynamic metatags
 # gem 'meta-tags'
-
+# PDF parsing
+# gem 'pdf-reader'
+# PDF generation
+# gem 'wicked_pdf'
+# host/domain name validation
+# gem 'validates_hostname'
+# A/B testing
+# gem 'field_test'
 # Nested froms
 # gem 'cocoon'
 # Email validation
