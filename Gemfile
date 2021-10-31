@@ -63,6 +63,8 @@ gem 'awesome_print'
 # Basic auth
 gem 'lockup'
 
+# image processing
+# gem 'image_processing'
 # Dynamic metatags
 # gem 'meta-tags'
 # PDF parsing
