@@ -44,6 +44,7 @@ gem 'config'
 gem 'paper_trail'
 # Background jobs
 gem 'sidekiq'
+gem 'sidekiq-statistic'
 # Encrypt sensitive data
 gem 'lockbox'
 # Anonymise IP
@@ -173,6 +174,7 @@ group :development do
   gem 'spring-watcher-listen'
   # Catch and show emails
   gem 'letter_opener'
+  gem 'letter_opener_web'
   # HTML to Slim file conversion
   gem 'html2slim'
   # Environment variables
