@@ -155,15 +155,42 @@ gem 'lockup'
 # gem 'paranoia'
 # Pagination
 # gem 'kamini'
-# Clenaer view helpders
+# Cleaner view helpers
 # gem 'draper'
-# Preload counts (to avoid N+1 issues)
-# gem 'preload_counts'
+# Airport directory
+# gem 'airports'
+# Email analytics
+# gem 'ahoy_email'
+# Breakdcrumbs
+# gem 'loaf'
+# Custom error pages
+# gem 'exception_handler'
+# Metatags
+# gem 'meta-tags'
+# Front-end code structure
+# gem 'komponent'
 
-group :staging, :production do
-  # Security
-  # gem 'sqreen'
-end
+# group :staging, :production do
+#   # Make request.ip work correctly
+#   gem 'cloudflare-rails'
+#   # Security
+#   gem 'sqreen'
+# end
+
+# group :test do
+#   # CI friendly rspec formatting
+#   gem 'rspec_junit_formatter'
+#   # Test coverage anaysis
+#   gem 'simplecov'
+#   gem 'simplecov-lcov'
+# end
+
+# group :development, :test do
+#   gem 'dotenv-rails'
+#   gem 'rspec-rails'
+#   gem 'factory_bot_rails'
+#   gem 'ffaker'
+# end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code
@@ -192,11 +219,18 @@ group :development do
   gem 'bullet'
   # Time travelling
   gem 'timecop'
-  # Better error pages
-  gem 'better_errors'
-  gem 'binding_of_caller'
   # Keep the dataabase clean
   gem 'active_record_doctor'
+  # Annotate models with schema info
+  gem 'annotate'
+  # better error pages
+  gem 'better_errors'
+  # Advanced better_errors features
+  gem 'binding_of_caller'
+  # Performance anc exception monitoring
+  gem 'rorvswild'
+  # Check database matches AR validations
+  # gem 'database_consistency'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
